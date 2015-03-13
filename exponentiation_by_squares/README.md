@@ -1,3 +1,3 @@
 #Exponentiation By Squares
 
-![](/diagram.png)
+![](equations.png)
