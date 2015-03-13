@@ -10,6 +10,8 @@ Exponentiating by squaring is a method for fast computation of positive integer 
 
 The while loop version is nearly 2 times faster than the recursive version and nearly 8000 times faster than the simple version.
 
+###Mathematical Basis
+
 It is based on the following equations
 
 ![](equations.png)
