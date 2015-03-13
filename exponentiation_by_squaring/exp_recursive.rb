@@ -1,4 +1,4 @@
-#Simple exponentiation
+#Exponentiation by squaring recursive
 def exp(x, n)
   return 1 if n == 0
   return x if n == 1
