@@ -18,15 +18,15 @@ It is based on the following equations
 
 It is quite easy to see how these equations can be formed into a recursive algorithm. Here is the Ruby code I used
 
-  def exp(x, n)
-    return 1 if n == 0
-    return x if n == 1
-    if n[0].nonzero?
-      x * exp(x * x, (n - 1) / 2)
-    else
-      exp(x * x, n / 2)
+    def exp(x, n)
+      return 1 if n == 0
+      return x if n == 1
+      if n[0].nonzero?
+        x * exp(x * x, (n - 1) / 2)
+      else
+        exp(x * x, n / 2)
+      end
     end
-  end
 
 The edge cases are for n equals 0 or 1, in which we return 1 or x
 
