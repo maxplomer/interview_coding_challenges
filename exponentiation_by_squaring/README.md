@@ -18,7 +18,7 @@ It is based on the following equations
 
 ###Algorithm Diagram
 
-Here is a diagram for how the the while loop operations to perform exponentiation by squaring.
+Here is a diagram visualizing how the the while loop operates to perform exponentiation by squaring.
 
 Calcuate a^b, start with x=a, n=b, and result=1
 
