@@ -13,3 +13,13 @@ The while loop version is nearly 2 times faster than the recursive version and n
 It is based on the following equations
 
 ![](equations.png)
+
+
+
+###Algorithm Diagram
+
+Here is a diagram for how the the while loop operations to perform exponentiation by squaring.
+
+Calcuate a^b, start with x=a, n=b, and result=1
+
+![](equations.png)
