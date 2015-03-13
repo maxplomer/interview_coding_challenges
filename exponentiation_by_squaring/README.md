@@ -22,4 +22,4 @@ Here is a diagram for how the the while loop operations to perform exponentiatio
 
 Calcuate a^b, start with x=a, n=b, and result=1
 
-![](exp_whileloop_alorithm.png)
+![](exp_whileloop_algorithm.png)
