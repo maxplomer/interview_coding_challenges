@@ -40,13 +40,13 @@ Calcuate a^b, start with x=a, n=b, and result=1
 
 **Variable values while calculating a^10**
 
-| Iteration | Result   | x       | n      |
-|-----------|----------|---------|--------|
-| 0         | 1        | a       | 10     |
-| 1         | 1        | a^2     | 5      |
-| 2         | a^2      | a^4     | 2      |
-| 3         | a^2      | a^8     | 1      |
-| 4         | a^2 a^8  | a^18    | 0      |
+| Iteration | Result     | x       | n      |
+|-----------|------------|---------|--------|
+| 0         | 1          | a       | 10     |
+| 1         | 1          | a^2     | 5      |
+| 2         | a^2        | a^4     | 2      |
+| 3         | a^2        | a^8     | 1      |
+| 4         | (a^2)(a^8) | a^18    | 0      |
 
 
 
