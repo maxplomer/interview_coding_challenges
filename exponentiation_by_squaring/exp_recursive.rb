@@ -10,8 +10,7 @@ def exp(x, n)
 end
 
 beginning_time = Time.now
-result = exp(2, 3)
+result = exp(2, 99999)
 end_time = Time.now
 
-puts result
 puts (end_time - beginning_time)
