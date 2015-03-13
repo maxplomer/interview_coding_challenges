@@ -25,3 +25,5 @@ Here is a diagram visualizing how the the while loop operates to perform exponen
 Calcuate a^b, start with x=a, n=b, and result=1
 
 ![](exp_whileloop_algorithm.png)
+
+**Variable values while calculating a^10**
