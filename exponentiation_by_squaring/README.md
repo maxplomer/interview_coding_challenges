@@ -54,7 +54,7 @@ The [simple exp](exp.rb) function is O(n) because the algorithm grows in proport
 
     def exp(x, n)
       result = 1
-      
+      n.times { result *= x}
       result
     end
 
@@ -68,8 +68,28 @@ Similarly, if there was a nested loop, the time complexity would be O(n^2).
       result
     end
 
-
 The mystery function is x^(n^2)
+
+**Explaining why exponentiation by squaring has O(log n) time complexity**
+
+We can see that n (from x^n) grows exponentially compared to the number of iterations needed to solve it.
+
+| Iterations | n     |
+|------------|-------|
+| 1          | 2     |
+| 2          | 4     |
+| 3          | 8     |
+| 4          | 16    |
+| 5          | 32    |
+
+
+n = 2^Iterations
+
+Iterations = log_2 (n)
+
+Since the algorithm grows in logarithmic proportion to its input, the time complexity is O(log n)
+
+
 
 
 
