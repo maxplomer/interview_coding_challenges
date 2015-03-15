@@ -32,6 +32,8 @@ The edge cases are for n equals 0 or 1, in which we return 1 or x
 
 ###Algorithm Diagram
 
+Recursion is slow, complex and fragile for this algorithm. Better to just loop over the bits of exponent.
+
 Here is a diagram visualizing how the the while loop operates to perform exponentiation by squaring.
 
 Calcuate a^b, start with x=a, n=b, and result=1
@@ -89,7 +91,9 @@ Iterations = log_2 (n)
 
 Since the algorithm grows in logarithmic proportion to its input, the time complexity is O(log n)
 
+**How does time complexity compare with recorded computing times?**
 
+log base 2 of 99999 is 16.609626
 
-
+This means that what would take the simple algorithm 99999 iterations take the exponentiation by squaring algorithm 17 iterations.  Exponentiation by squaring is nearly 6000 times faster, which is similar to what we found from recorded computing times.
 
