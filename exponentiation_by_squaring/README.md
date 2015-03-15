@@ -48,9 +48,28 @@ Calcuate a^b, start with x=a, n=b, and result=1
 | 3         | a^2        | a^8     | 1      |
 | 4         | (a^2)(a^8) | a^18    | 0      |
 
+###Time Complexity
+
+The [simple exp](exp.rb) function is O(n) because the algorithm grows in proportion to its input
+
+    def exp(x, n)
+      result = 1
+      
+      result
+    end
+
+Similarly, if there was a nested loop, the time complexity would be O(n^2).
+
+    def mystery(x, n)
+      result = 1
+      n.times do 
+        n.times { result *= x}
+      end
+      result
+    end
 
 
-
+The mystery function is x^(n^2)
 
 
 
