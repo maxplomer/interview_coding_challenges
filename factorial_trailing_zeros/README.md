@@ -53,8 +53,7 @@ and 6 = 3 * 2, so we can take the 2 for the 5 from 15, and leave the 3
 
 Three 5's were factored out (that form three 10 factors), resulting in 3 trailing zeros
 
-
-Ok now take for instance !60
+**Now take for instance !60**
 
 we have all these multiples of 5:
 
@@ -86,9 +85,9 @@ a total of 14 - 5's can be factored out, resulting in 14 trailing zeros
 
 
 
-final example to fully illustrate why algorithm works
+**Final example to fully illustrate why algorithm works**
 
-the algorithm is take for instance !125
+Start with !125
 
 divide 125/5, take the floor, it equalls 25
 
