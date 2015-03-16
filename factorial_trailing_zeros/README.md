@@ -51,33 +51,20 @@ Three 5's were factored out (that form three 10 factors), resulting in 3 trailin
 
 we have all these multiples of 5:
 
-5  = 5
-
-10 = 5 * 2
-
-15 = 5 * 3
-
-20 = 5 * 4
-
-25 = 5 * 5
-
-30 = 5 * 6
-
-35 = 5 * 7
-
-40 = 5 * 8
-
-45 = 5 * 9
-
-50 = 5 * 5 * 2
-
-55 = 5 * 11
-
-60 = 5 * 12
-
+    5  = 5
+    10 = 5 * 2
+    15 = 5 * 3
+    20 = 5 * 4
+    25 = 5 * 5
+    30 = 5 * 6
+    35 = 5 * 7
+    40 = 5 * 8
+    45 = 5 * 9
+    50 = 5 * 5 * 2
+    55 = 5 * 11
+    60 = 5 * 12
+    
 a total of 14 - 5's can be factored out, resulting in 14 trailing zeros
-
-
 
 **Final example to fully illustrate why algorithm works**
 
