@@ -39,7 +39,7 @@ Take out the 10 as it is ten!
 
 and 6 = 3 * 2, so we can take the 2 for the 5 from 15, and leave the 3
 
-    3 * 14 * 13 * 12 * 11 * 9 * 8 * 7 * 3 * 4 * 3 * 2 * 1 = 1307674368
+    3 * 14 * 13 * 12 * 11 * 9 * 8 * 7 * 3 * 4 * 3 * 1 = 1307674368
     5 * 2 = 10
     10
     5 * 2 = 10
@@ -68,25 +68,19 @@ A total of 14 - 5's can be factored out, resulting in 14 trailing zeros
 
 **Final example to fully illustrate why algorithm works**
 
-Start with !125
+    Start with !125
+    divide 125/5, take the floor, it equals 25
+    divide 125/5^2,take the floor, it equals 5
+    divide 125/5^3,take the floor, it equals 1
+    divide 125/5^4,take the floor, it equals 0, quit!!!!!
 
-divide 125/5, take the floor, it equalls 25
+The total is 31, so there is 31 trailing zeros!!!!
 
-divide 125/5^2,take the floor, it equalls 5
+**But why the heck does this work?**
 
-divide 125/5^3,take the floor, it equalls 1
+Take for instance !125 = a very large number !!!
 
-divide 125/5^4,take the floor, it equalls 0, quit!!!!!
-
-the total is 31, so there is 31 trailing zeros!!!!
-
-
-
-
-but why the heck does this work?
-
-take for instance !125 = a large number !!!
-start writing all the multiples of 5
+Start writing all the multiples of 5
 
 5
 10
