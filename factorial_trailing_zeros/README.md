@@ -98,7 +98,7 @@ Start writing all the multiples of 5
 
 Count all the multiples of 5 <= 125
 
-Note that 25=5*5, so we are counting it once as a multiple of 5 <= 125
+Note that 25 = 5 * 5, so we are counting it once as a multiple of 5 <= 125
 
 Now count all the multiple of 25, they need to be counted again because
 
@@ -106,7 +106,7 @@ They have an extra 5 hidden in them
 
 So now we have counted 25 twice and also 125 twice
 
-Now could all the multiples of 5^3=125, there is only one, 125, and its been counted twice already, so now we count is a 3rd time, wahoo!!!
+Now could all the multiples of 5^3 = 125, there is only one, 125, and its been counted twice already, so now we count is a 3rd time, wahoo!!!
 
 That is how the algorithm works
 
