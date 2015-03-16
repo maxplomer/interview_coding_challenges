@@ -15,7 +15,7 @@ Its very easy to just [convert n! to a string](trailing_zeros_simple.rb) and cou
 
 We know that when we multiply by ten it adds a trailing zero
 
-Take for instance !5 = 120
+**Take for instance !5 = 120**
 
 5 * 4 * 3 * 2 * 1 = 120
 
@@ -29,8 +29,7 @@ We can take out the 5 and 2 and make a factor of 10
 
 One 5 can be factored out, resulting in 1 trailing zero
 
-
-take for instance !15 = 1307674368000
+**Take for instance !15 = 1307674368000**
 
 15 * 14 * 13 * 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 1307674368000
 
