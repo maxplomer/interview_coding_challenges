@@ -112,7 +112,7 @@ That is how the algorithm works.
 
 **Note:**
 
-Instead of exactly following this alogorithm we are instead of multiplying the divisor (5), we instead just divide the numerator
+Instead of exactly following this algorithm we are instead of multiplying the divisor (5), we instead just divide the numerator
 
     Start with !125
     divide 125 by 5, take the floor, it equals 25
@@ -122,7 +122,16 @@ Instead of exactly following this alogorithm we are instead of multiplying the d
 
 ###What is the time complexity of this algorithm?
 
+| Iterations |   n    |
+|------------|--------|
+|     1      |   1    |
+|     2      |   5    |
+|     3      |   25   |
+|     4      |   125  |
 
+n = 5^(Iterations - 1)
 
+Iterations = log_5 (n) + 1
 
+Therefore the time complexity is O(log n)
 
