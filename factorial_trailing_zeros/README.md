@@ -106,21 +106,15 @@ They have an extra 5 hidden in them
 
 So now we have counted 25 twice and also 125 twice
 
-Now could all the multiples of 5^3 = 125, there is only one, 125, and its been counted twice already, so now we count is a 3rd time, wahoo!!!
+Now count all the multiples of 5^3 = 125, there is only one, 125, and its been counted twice already, so now we count it a 3rd time, wahoo!!!
 
-That is how the algorithm works
+That is how the algorithm works.
 
+**Note:**
 
+Instead of exactly following this alogorithm we are instead of multiplying the divisor (5), we instead just divide the numerator
 
-
-
-
-
-##############note##############
-
-instead of exactly following this alogorithm we are instead of multiplying the divisor just dividing the numerator
-
-
+125 / 5 = 5
 
 
 
