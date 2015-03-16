@@ -13,9 +13,9 @@ When programmers were studying the behavior of the factorial function, they defi
 
 Its very easy to just [convert n! to a string](trailing_zeros_simple.rb) and count the trailing zeros, but there has to be a [better way](trailing_zeros.rb)! 
 
-we know that when we multiply by ten it adds a trailing zero
+We know that when we multiply by ten it adds a trailing zero
 
-take for instance !5 = 120
+Take for instance !5 = 120
 5*4*3*2*1 = 120
 we can take the 5 and 2 and make a factor of 10
 4*2*1 = 12
