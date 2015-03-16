@@ -17,7 +17,7 @@ We know that when we multiply by ten it adds a trailing zero
 
 Take for instance !5 = 120
 
-5*4*3*2*1 = 120
+5 * 4 * 3 * 2 * 1 = 120
 
 we can take the 5 and 2 and make a factor of 10
 
