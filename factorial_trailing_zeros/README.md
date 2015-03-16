@@ -19,7 +19,7 @@ Take for instance !5 = 120
 
 5 * 4 * 3 * 2 * 1 = 120
 
-we can take the 5 and 2 and make a factor of 10
+We can take out the 5 and 2 and make a factor of 10
 
 4 * 2 * 1 = 12
 
@@ -27,40 +27,61 @@ we can take the 5 and 2 and make a factor of 10
 
 10 * 12 = 120
 
-one 5 can be factored out, resulting in 1 trailing zero
+One 5 can be factored out, resulting in 1 trailing zero
 
 
 take for instance !15 = 1307674368000
-15*14*13*12*11*10*9*8*7*6*5*4*3*2*1 = 1307674368000
-we can take the 5 and 2 and make a factor of 10
-take of the 10 as it is ten!
-15 is 5*3, so we can take out the 5 and leave the 3
-and 6=3*2, so we can take the 2 for the 5 from 15, and leave the 3
 
-3*14*13*12*11*9*8*7*3*4*3*2*1 = 1307674368
-5*2=10
+15 * 14 * 13 * 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 1307674368000
+
+We can take out the 5 and 2 and make a factor of 10
+
+Take out the 10 as it is ten!
+
+15 is 5 * 3, so we can take out the 5 and leave the 3
+
+and 6 = 3 * 2, so we can take the 2 for the 5 from 15, and leave the 3
+
+3 * 14 * 13 * 12 * 11 * 9 * 8 * 7 * 3 * 4 * 3 * 2 * 1 = 1307674368
+
+5 * 2 = 10
+
 10
-5*2=10
-1307674368*10*10*10=1307674368000
 
-three 5's can be factored out (with form three 10 factors), resulting in
-3 trailing zeros
+5 * 2 = 10
+
+1307674368 * 10 * 10 * 10 = 1307674368000
+
+Three 5's were factored out (that form three 10 factors), resulting in 3 trailing zeros
 
 
 Ok now take for instance !60
+
 we have all these multiples of 5:
+
 5  = 5
-10 = 5*2
-15 = 5*3
-20 = 5*4
-25 = 5*5
-30 = 5*6
-35 = 5*7
-40 = 5*8
-45 = 5*9
-50 = 5*5*2
-55 = 5*11
-60 = 5*12
+
+10 = 5 * 2
+
+15 = 5 * 3
+
+20 = 5 * 4
+
+25 = 5 * 5
+
+30 = 5 * 6
+
+35 = 5 * 7
+
+40 = 5 * 8
+
+45 = 5 * 9
+
+50 = 5 * 5 * 2
+
+55 = 5 * 11
+
+60 = 5 * 12
 
 a total of 14 - 5's can be factored out, resulting in 14 trailing zeros
 
