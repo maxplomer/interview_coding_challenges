@@ -21,11 +21,11 @@ Take for instance !5 = 120
 
 we can take the 5 and 2 and make a factor of 10
 
-4*2*1 = 12
+4 * 2 * 1 = 12
 
-5*2 = 10
+5 * 2 = 10
 
-10*12 = 120
+10 * 12 = 120
 
 one 5 can be factored out, resulting in 1 trailing zero
 
