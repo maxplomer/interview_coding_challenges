@@ -69,10 +69,10 @@ A total of 14 - 5's can be factored out, resulting in 14 trailing zeros
 **Final example to fully illustrate why algorithm works**
 
     Start with !125
-    divide 125/5, take the floor, it equals 25
-    divide 125/5^2,take the floor, it equals 5
-    divide 125/5^3,take the floor, it equals 1
-    divide 125/5^4,take the floor, it equals 0, quit!!!!!
+    divide 125 by 5, take the floor, it equals 25
+    divide 125 by 5^2,take the floor, it equals 5
+    divide 125 by 5^3,take the floor, it equals 1
+    divide 125 by 5^4,take the floor, it equals 0, quit!!!!!
 
 The total is 31, so there is 31 trailing zeros!!!!
 
@@ -114,15 +114,13 @@ That is how the algorithm works.
 
 Instead of exactly following this alogorithm we are instead of multiplying the divisor (5), we instead just divide the numerator
 
-125 / 5 = 5
+    Start with !125
+    divide 125 by 5, take the floor, it equals 25
+    divide 25 by 5,take the floor, it equals 5
+    divide 5 by 5,take the floor, it equals 1
+    divide 1 by 5,take the floor, it equals 0, quit!!!!!
 
-
-
-
-
-
-
-###What is the time complexity of this algorithm
+###What is the time complexity of this algorithm?
 
 
 
