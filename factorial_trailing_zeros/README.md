@@ -11,7 +11,7 @@ When programmers were studying the behavior of the factorial function, they defi
 
 ###Trailing Zero Algorithm
 
-Its very easy to just [convert n! to a string](trailing_zeros_simple.rb) and count the trailing zeros, but there has to be a better way! 
+Its very easy to just [convert n! to a string](trailing_zeros_simple.rb) and count the trailing zeros, but there has to be a [better way](trailing_zeros.rb)! 
 
 we know that when we multiply by ten it adds a trailing zero
 
