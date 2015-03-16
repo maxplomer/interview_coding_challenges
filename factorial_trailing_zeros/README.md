@@ -21,11 +21,9 @@ We know that when we multiply by ten it adds a trailing zero
 
 We can take out the 5 and 2 and make a factor of 10
 
-4 * 2 * 1 = 12
-
-5 * 2 = 10
-
-10 * 12 = 120
+    4 * 2 * 1 = 12
+    5 * 2 = 10
+    10 * 12 = 120
 
 One 5 can be factored out, resulting in 1 trailing zero
 
@@ -41,15 +39,11 @@ Take out the 10 as it is ten!
 
 and 6 = 3 * 2, so we can take the 2 for the 5 from 15, and leave the 3
 
-3 * 14 * 13 * 12 * 11 * 9 * 8 * 7 * 3 * 4 * 3 * 2 * 1 = 1307674368
-
-5 * 2 = 10
-
-10
-
-5 * 2 = 10
-
-1307674368 * 10 * 10 * 10 = 1307674368000
+    3 * 14 * 13 * 12 * 11 * 9 * 8 * 7 * 3 * 4 * 3 * 2 * 1 = 1307674368
+    5 * 2 = 10
+    10
+    5 * 2 = 10
+    1307674368 * 10 * 10 * 10 = 1307674368000
 
 Three 5's were factored out (that form three 10 factors), resulting in 3 trailing zeros
 
