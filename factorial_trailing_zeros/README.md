@@ -49,7 +49,7 @@ Three 5's were factored out (that form three 10 factors), resulting in 3 trailin
 
 **Now take for instance !60**
 
-we have all these multiples of 5:
+We have all these multiples of 5:
 
     5  = 5
     10 = 5 * 2
@@ -64,7 +64,7 @@ we have all these multiples of 5:
     55 = 5 * 11
     60 = 5 * 12
     
-a total of 14 - 5's can be factored out, resulting in 14 trailing zeros
+A total of 14 - 5's can be factored out, resulting in 14 trailing zeros
 
 **Final example to fully illustrate why algorithm works**
 
