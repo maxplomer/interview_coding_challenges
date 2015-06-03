@@ -1,0 +1,45 @@
+body {
+  padding: 20px 50px;
+}
+
+.deleted-true {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.fa-pencil-square-o {
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.edit-customer {
+  background: rgba(255,255,255,0.95);
+  height: 100%;
+  left:0;
+  padding: 20px 50px;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+}
+
+.toggle:focus {
+  outline:0 !important;
+}
+
+.toggle:after {
+  content: 'X';
+}
+
+.toggle:checked:after {
+  content: 'undo';
+}
