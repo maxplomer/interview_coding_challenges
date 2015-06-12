@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <form id="myForm">
+    <input name="firstName" placeholder="First Name" required>
+    <br>
+    <input name="lastName" placeholder="Last Name" required>
+    <br>
+    <input name="favoriteFood" placeholder="Favorite Food" required>
+    <br>
+    <input type="number" name="favoriteNumber" placeholder="Favorite Number" required>
+    <br> Favorite Day of the Week
+    <select name="favoriteDay" required>
+      <option value="" disabled="disabled" selected="selected"> Please select a day </option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+    <br> Favorite Color
+    <select name="favoriteColor" required>
+      <option value="" disabled="disabled" selected="selected"> Please select a color </option>
+      <option value="White">White</option>
+      <option value="Black">Black</option>
+      <option value="Yellow">Yellow</option>
+      <option value="Blue">Blue</option>
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Purple">Purple</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h1>Output:</h1>
+  <hr><h3>First Name</h3>
+  <div id="first-name-div"></div>
+  <hr><h3>Last Name</h3>
+  <div id="last-name-div"></div>
+  <hr><h3>Favorite Food</h3>
+  <div id="favorite-food-div"></div>
+  Bonus
+  <div id="favorite-food-div-bonus"></div>
+  <hr><h3>Favorite Number</h3>
+  <div id="favorite-number-div"></div>
+  <hr><h3>Favorite Day of the Week</h3>
+  <div id="favorite-day-div"></div>
+  <hr><h3>Favorite Color</h3>
+  <div id="favorite-color-div-hexcode"></div>
+  <div id="favorite-color-div" style="height:15px;width:15px;"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
