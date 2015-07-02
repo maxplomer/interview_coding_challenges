@@ -20,6 +20,23 @@ def it_has_the_letters?(letters, word)          <====== THIS WILL WORK IN EVERY 
 end
 
 
+def get_all_shuffles(letters)         <====== ACTUALLY DEFINE THIS FUNCTION!!!!
+  len = letters.length
+  result = []
+  
+  factorial(len).times do
+    result << letters.shuffle
+  end
+  
+  result
+end
+
+def factorial(num)
+  return 1 if num <= 1
+  num * factorial(num - 1) 
+end
+
+
 
 
 
