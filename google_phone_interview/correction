@@ -1,0 +1,17 @@
+  len = letters.length
+  all_the_letters = ('a'..'z').to_a
+
+  all_the_letters.each do |letter|
+    letters_dup = letters.dup
+    letters_dup << letter
+    temp_all_shuffles = get_all_shuffles(letters_dup)
+    
+    temp_all_shuffles.each do |combo|
+      if dictionary_hash.include?(combo.join)    <====== WAS MISSING IF STATEMENT!!!!
+        return combo.join
+      end                                        <====== WAS MISSING IF STATEMENT!!!!
+    end
+  end
+  
+  nil
+end
