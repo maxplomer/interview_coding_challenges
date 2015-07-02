@@ -1,0 +1,45 @@
+def it_has_the_letters?(letters, word)          <====== THIS NEW VERSION OF FUNCTION WILL WORK IN EVERY CASE, ex: letters: ['p','o','l'], word = 'pool'
+  word_dup = word.dup
+  
+  letters.each do |letter|
+    if word_dup.include?(letter)
+      word_dup.sub(letter, '')
+    else
+      return false
+    end
+  end
+  
+  true
+end
+
+
+
+
+
+
+
+
+
+
+def get_all_shuffles(letters)         <====== ACTUALLY DEFINE THIS FUNCTION!!!!
+  letters.permutation.to_a
+end
+
+def secondary_search(dictionary_hash, letters)
+  len = letters.length
+  all_the_letters = ('a'..'z').to_a
+
+  all_the_letters.each do |letter|
+    letters_dup = letters.dup
+    letters_dup << letter
+    temp_all_shuffles = get_all_shuffles(letters_dup)
+    
+    temp_all_shuffles.each do |combo|
+      if dictionary_hash.include?(combo.join)    <====== WAS MISSING IF STATEMENT!!!!
+        return combo.join
+      end                                        <====== WAS MISSING IF STATEMENT!!!!
+    end
+  end
+  
+  nil
+end
