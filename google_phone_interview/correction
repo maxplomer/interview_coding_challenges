@@ -1,3 +1,29 @@
+
+
+
+def it_has_the_letters?(letters, word)
+  letters.all? { |i| word.include?(i) }          <====== THIS WILL NOT WORK IN EVERY CASE, ex: letters: ['p','o','l'], word = 'pool'
+end
+
+
+
+def it_has_the_letters?(letters, word)          <====== THIS WILL WORK IN EVERY CASE
+  letters.each do |letter|
+    if word.include?(letter)
+      word.sub(letter, '')
+    else
+      return false
+    end
+  end
+  
+  true
+end
+
+
+
+
+
+
   len = letters.length
   all_the_letters = ('a'..'z').to_a
 
