@@ -10,3 +10,7 @@ This is a collection of coding challenges to practice for coding interviews.
 [AngularJS Recursive Comments](angularjs_recursive_comments)
 
 [JavaScript Form Test](javascript_form_test)
+
+[JavaScript Form Test](javascript_form_test)
+
+[Google Phone Interview](google_phone_interview)
