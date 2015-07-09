@@ -1,0 +1,173 @@
+// Input:
+//  Rectangular canvas area with upper-left at 0,0, and width cw height ch
+//  Image aspect ratio ir (width / height)
+//
+// Output:
+//  - image xpos, ypos (upper-left)
+//  - image sizeh, sizew
+//
+// Cover the canvas completely with the image.
+// Can scale the image, but aspect ratio should remain the same.
+// Covering should be minimal.
+// Center of the image is center of canvas.
+// Coordinate space is 0,0 in upper left
+
+
+function fitimage(cw, ch, ir)
+{
+    // TODO
+
+    return [xpos, ypos, sizex, sizey];
+}
+
+
+def fitimage(cw, ch, ir)
+  if ch * ir > cw
+    # if the aspect ratio is wide
+    sizex = ir / ch
+    sizey = ch
+    diff = sizex - cw
+    
+    ypos = 0
+    xpos = - diff / 2
+  
+  else
+    # if picture is thing, going to cut the top and bottom
+    sizex = cw
+    sizey = cw * ir
+    diff = sizey - ch
+    
+    xpos = 0
+    ypos = - diff / 2
+  end
+
+
+  return [xpos, ypos, sizex, sizey]
+end
+
+
+
+
+
+#
+#
+#
+#
+#
+
+
+
+
+
+// Resize an image without aliasing
+// Input bitmap in array, rows first, then columns (e.g., $bitmap[$y * $origw + $x] is value at $x, y)
+// Assume values are just integers 0-255
+// New size is less than original size
+// Goal is to downsize correctly without aliasing (wrong way is just to pull closest pixel from original image)
+// Output is another $bitmapout - array of values - size $neww * $newh
+
+// $neww < $origw and $newh < $origh
+
+#function resize($bitmap, $origw, $origh, $neww, $newh)
+#{
+#    return $bout;
+#}
+
+
+def convert_array_to_matrix(bitmap,row_length)
+  bitmap_dup = bitmap.dup
+  result = []
+  len = bitmap.length / row_length
+  
+  len.times do 
+    result << [bitmap.shift(row_length)]
+  end
+
+  result
+end
+
+def linear_interpolate(array, index)
+  before = index.floor
+  after = index.ceil
+  
+  diff = index - before
+  rise = array[after] - array[before]
+
+  before + diff * rise
+end
+
+
+def get_value(old_width, old_height, new_width, new_height, bitmap_matrix, row_i, col_i)
+  
+  # if a corner just give it the old value
+  #top left #these directions will need recalibrating
+  if row_i ==0 and col_i ==0
+    return bitmap_matrix.first.first
+  end
+  
+  #top right
+  if row_i ==0 and col_i == (new_width - 1)
+    return bitmap_matrix.first.last
+  end
+  
+  #bottom left
+  if row_i == (new_height - 1) and col_i ==0
+    return bitmap_matrix.last.first
+  end
+  
+  #bottom right
+  if row_i == (new_height - 1) and col_i == (new_width - 1)
+    return bitmap_matrix.last.last
+  end 
+
+  ## start interpolation
+  old_row_i = row_i / old_width * new_width
+  old_col_i = col_i / old_heigh * new_height
+
+  # if an horiztonal edge  then just linear interpolate the row
+  
+  
+  if row_i == 0 || row_i == (new_height - 1)
+    row = bitmap_matrix[row_i]
+    return linear_interpolate(row, old_col_i)
+  end
+
+  if col_i == 0 || col_i == (new_width - 1)
+    col = []
+    bitmap_matrix.each do { |row| col << row[col_i]}
+    return linear_interpolate(col, old_row_i)
+  end
+
+  # otherwise attempt to linear interpolate in both directions and average
+  row = bitmap_matrix[row_i]
+  col = []
+  bitmap_matrix.each do { |row| col << row[col_i]}
+
+  return (linear_interpolate(row, old_col_i) + linear_interpolate(col, old_row_i))/2
+end
+
+
+
+def resize(bitmap, old_width, old_height, new_width, new_height)
+  bitmap_matrix = convert_array_to_matrix(bitmap, old_width)
+  
+  new_bitmap_matrix = Array.new(new_height) do 
+    [nil] * new_width
+  end
+  
+  
+  new_bitmap_matrix.each_index do |row_i|
+    row.each_index do |col_i|   
+      new_bitmap_matrix[row_i][col_i] = get_value(old_width, old_height, new_width, new_height, bitmap_matrix, row_i, col_i)
+    end
+  end
+  
+  
+  new_bitmap_matrix.flatten
+end
+
+
+#25      25       26       27      46        99
+#
+#
+#    25+25/2        (26+27)/2        
