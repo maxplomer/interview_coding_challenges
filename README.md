@@ -11,8 +11,6 @@ This is a collection of coding challenges to practice for coding interviews.
 
 [JavaScript Form Test](javascript_form_test)
 
-[JavaScript Form Test](javascript_form_test)
-
 [Google Search License Plates](google_search_license_plates)
 
 [Collage Image Reszie](collage_image_resize)
