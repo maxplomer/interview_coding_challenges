@@ -1,4 +1,4 @@
-My solution is inspired by the React Virtual DOM.
+###My solution is inspired by the React Virtual DOM.
 
 
 In the React framework's Virtual DOM, instead of actually modifying the DOM, it has a virtual DOM that is modified, which then in return updates the actual DOM.
