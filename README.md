@@ -14,3 +14,9 @@ This is a collection of coding challenges to practice for coding interviews.
 [Google Search License Plates](google_search_license_plates)
 
 [Collage Image Reszie](collage_image_resize)
+
+[Bloomberg Prototype](bloomberg_prototype)
+
+[Salesforce.com](saleforce_dot_com)
+
+[Bridgewater](bridgewater)

@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background-color: rgb(120, 120, 120);
+  color: white;
+}
+
+#list, #virtual-list {
+  padding: 8px 8px 0 8px;
+}
+
+#list {
+  position: absolute;
+  top: 0;
+}
+
+#virtual-list {
+  visibility: hidden;
+}
+
+#virtual-list.grid {
+  padding-right: 0;
+}
+
+#virtual-list.metro {
+  white-space: nowrap;
+}
+
+.list-item {
+  background: -webkit-linear-gradient(rgb(173,191,224), rgb(88,143,206), rgb(173,191,224));
+  border-top: 1px solid white;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 8px;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+#list > .list-item {
+  position: absolute;
+}
+
+.grid > .list-item > .item-text,
+.metro > .list-item > .item-text {
+  position: relative;
+  top: 60px;
+  text-align: center;
+}
+
+.grid > .list-item,
+.metro > .list-item {
+  border-radius: 13px;
+  height: 60px;
+  line-height: 50px;
+  margin-bottom: 28px;
+  margin-right: 8px;
+  width: 60px;
+}
+
+/* Fix for margin on position absolute */
+#list.metro > .list-item:after {
+  right: -10px;
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 10px;
+}
+
+#sidebar {
+  background-color: rgb(10,10,10);
+  color: white;
+  font-size: 12px;
+  height: 100%;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  transition: all 0.25s ease-in-out 0s;
+  z-index: 100;
+  width: 46px;
+}
+
+#sidebar > button {
+  background-color: rgb(62,73,84);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  margin: 2px 0;
+  outline: 0;
+  padding: 5px 8px;
+  width: 100%;
+}
+
+#sidebar > button.active {
+  background-color: rgb(26,59,148);
+}
+
+#sidebar > button:hover {
+  opacity: 0.8;
+}
+
+#sidebar > button:nth-of-type(1) {
+  border-radius: 4px 4px 0 0;
+}
+
+#sidebar > button:last-of-type {
+  border-radius: 0 0 4px 4px;
+}
+
+.badge-holder {
+  width: 0;
+  height: 0;
+}
+
+.badge {
+  width: 15px;
+  height: 15px;
+  color: black;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 2px;
+  z-index: 1000 !important;
+  position: relative;
+  left: -7px;
+  opacity: 0;
+}
+
+.badge-l {
+  top: -83px;
+}
+
+.badge-g {
+  top: -55px;
+}
+
+.badge-m {
+  top: -28px;
+}
+
+.top-bg-holder {
+  height: 0;
+  width: 0;
+}
+
+.grid .top-bg {
+  background-color: rgb(173,191,224);
+  height: 40px;
+  width: 75px;
+  left: -10px;
+  top: -10px;
+  position: relative;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}

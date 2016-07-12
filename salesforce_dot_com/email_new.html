@@ -1,0 +1,149 @@
+<div id="desk-external-variables-email_new" class="desk-external-variables">
+  <div id="system-snippets-name_required">{{system.snippets.name_required}}</div>
+  <div id="system-snippets-email_required">{{system.snippets.email_required}}</div>
+  <div id="system-snippets-invalid_email">{{system.snippets.invalid_email}}</div>
+  <div id="system-snippets-subject_required">{{system.snippets.subject_required}}</div>
+  <div id="system-snippets-question_required">{{system.snippets.question_required}}</div>
+  <div id="system-snippets-exceeding_max_chars">{{system.snippets.exceeding_max_chars}}</div>
+  <div id="max_number_attachments">{{desk.system.max_attachments}}</div>
+  <div id="system-snippets-add_attachment">{{system.snippets.add_attachment}}</div>
+</div>
+<div id='breadcrumbs'>
+  <a href='{{desk.system.links.home}}'>{{system.snippets.home}}</a> &rsaquo; {{system.snippets.email_us}}
+</div>
+<div id='support-main'>
+  <div class='support-body'>
+    <div class='content'>
+      <h3>{{system.snippets.email_us}}</h3>
+      <div id='form'>
+        {{form_begin}}
+        <div class='input-block'>
+          <span class='label'>
+          {{system.snippets.your_name}} <span>({{system.snippets.required}})</span>
+          </span>
+          <div>
+            <input type="text" id="my-first-name" placeholder="First name">
+            <input type="text" id="my-last-name" placeholder="Last name">
+            <input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
+          </div>
+        </div>
+        <div class="form-group div-category">
+          <label for="customer_custom_customer_type" class="control-label">
+          Customer Type ({{system.snippets.required}}):
+          </label>
+          {{ customer_custom_customer_type }}
+        </div>
+        <div class="form-group div-category" id="student-id-div" style="display:none;">
+          <label for="customer_custom_student_id" class="control-label">
+          Student ID
+          </label>
+          {{ customer_custom_student_id }}
+        </div>
+        <div class='input-block'>
+          <span class='label'>
+          {{system.snippets.subject}} <span>({{system.snippets.required}})</span>
+          </span>
+          <div>
+            <select id="email_subject_select">
+              <option value="">Please Select</option>
+              <option value="General">General</option>
+              <option value="Financing">Financing</option>
+              <option value="Other">Other</option>
+            </select>
+            <input id='email_subject' maxlength='100' name='email[subject]' type='text' value='{% if search_term and search_term != '' %}{{search_term}}{% else %}{{email.subject}}{%endif%}'/>
+          </div>
+        </div>
+        <div style="height:0px;width:0px;overflow:hidden;">
+          <div class='input-block'>
+            <span class='label'>
+            {{system.snippets.your_email}} <span>({{system.snippets.required}})</span>
+            </span>
+            <div>
+              <input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
+            </div>
+          </div>
+          <div class='input-block'>
+            <span class='label'>
+            {{system.snippets.message}} <span>({{system.snippets.required}})</span>
+            </span>
+            <div>
+              <textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class='input-button'>
+          <input id='email_submit' name='commit' type='submit' value='{{system.snippets.send_email}}' />
+          <img alt='Ajax-loader-small' id='email_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display: none; margin: 7px 0 0 5px; position: absolute;' />
+        </div>
+        {{form_end}}
+      </div>
+    </div>
+  </div>
+  <!--
+    ***************
+    The following attribution needs to remain as is in terms of wording with the appropriate link back to desk.com as per our terms of service: http://www.desk.com/terms
+    If you would like, you may change the location or the styling to better match your site, but the content and the link must remain in the template and visible to end users.
+    ****************
+    -->
+  <div id='footer'>
+    {{ desk.page.theme.footer_content }}
+    <div class="powered_by_desk">
+      <a href='http://www.desk.com'>
+        <div class="powered_by_logo"></div>
+      </a>
+      Powered by &nbsp;Desk.com
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.email_new.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".div-category select").rules("add", { 
+      required:true, 
+      messages: { required: "Category is required." } 
+    });
+  });
+  
+  var updateNameField = function() {
+    var firstName = $("#my-first-name").val();
+    var lastName = $("#my-last-name").val();
+    if (firstName != "" && lastName != "") {
+      $("#interaction_name").val(firstName + " " + lastName);
+    } else {
+      $("#interaction_name").val("");
+    }
+  }
+  
+  $("#my-first-name").change(updateNameField);
+  $("#my-last-name").change(updateNameField);
+  
+  $( "#customer_custom1" ).change(function() {
+    var customer_type = $( "#customer_custom1" ).val();
+    if (customer_type == "Future Student" || customer_type == "Current Student") {
+      $("#student-id-div").show();
+    } else {
+      $("#student-id-div").hide();
+    }
+  }); 
+  
+  $("#email_subject").css('opacity', '0');
+  $("#email_subject").prop('disabled', true);
+  $("#interaction_name").css('opacity', '0');
+  $("#interaction_name").prop('disabled', true);
+  
+  $( "#email_subject_select" ).change(function() {
+    var customer_type = $( "#email_subject_select" ).val();
+    if (customer_type == "Other") {
+      $("#email_subject").css('opacity', '1');
+      $("#email_subject").val('');
+      $("#email_subject").prop('disabled', false);
+    } else {
+      $("#email_subject").css('opacity', '0');
+      $("#email_subject").prop('disabled', true);
+      $("#email_subject").val(customer_type);
+    }
+  });
+  
+  
+</script>

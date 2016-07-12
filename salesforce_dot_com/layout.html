@@ -1,0 +1,97 @@
+<div id='company-support-portal'>
+  <div id="wow-uni-header">
+    <div class="group" style="max-width: 1200px;margin:auto;">
+      <div class="header-color-div" style="background:rgb(207,174,8);"></div>
+      <div class="header-color-div" style="background:rgb(236,123,28);"></div>
+      <div class="header-color-div" style="background:rgb(127,194,40);"></div>
+      <div class="header-color-div" style="background:rgb(65,108,10);"></div>
+      <div class="header-color-div" style="background:rgb(194,80,81);"></div>
+      <div class="header-color-div" style="background:rgb(154,0,2);"></div>
+      <div class="header-color-div" style="background:rgb(130,76,127);"></div>
+      <div class="header-color-div" style="background:rgb(58,30,77);"></div>
+      <div class="header-color-div" style="background:rgb(42,58,103);"></div>
+    </div>
+    <img id="mobile-toggle"
+      src="https://i.imgur.com/Szgd1ZH.png"
+      style="cursor:pointer"
+      onclick="$('#mobile-buttons').toggleClass('hide_mobile_nav');">
+    <div id="mobile-ask"
+      onclick="window.location = 'https://news.google.com'">
+      ASK
+    </div>
+    <div class="group" style="width: 1200px;margin:auto;">
+      <img id="desktop-logo-nw" style="float:left;padding-top:10px;"
+        src="https://i.imgur.com/gmrjviG.png">
+      <div id="desktop-search">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search" style="color:rgb(109,109,109)"></i>      
+      </div>
+    </div>
+    <div id="wow-uni-logo">
+      WOW <b>University</b>
+    </div>
+  </div>
+  <div id="desktop-buttons">
+    <div id="home-button-left"
+      onclick="window.location = 'https://zzz-maxplomer.desk.com/'">
+      <i class="fa fa-home" style="font-size:18px;color:white;"></i>
+    </div>
+    <button class="nav-button">Discover</button>
+    <button class="nav-button">Apply</button>
+    <button class="nav-button">Afford</button>
+    <button class="nav-button">Visit</button>
+    <button class="nav-button">Follow</button>
+    <button class="nav-button">Ask</button>
+  </div>
+  <div id="mobile-buttons" class="hide_mobile_nav">
+    <button class="nav-button-mobile">Discover</button>
+    <button class="nav-button-mobile">Apply</button>
+    <button class="nav-button-mobile" style="border-right:0 !important;">Afford</button>
+    <hr style="margin:0 !important; border-top:1px solid rgb(193,193,193);">
+    <button class="nav-button-mobile">Visit</button>
+    <button class="nav-button-mobile">Follow</button>
+    <button class="nav-button-mobile" style="border-right:0 !important;">Ask</button>
+  </div>
+  <div class='wrapper'>
+    {{desk:body}}
+  </div>
+</div>
+<!-- Facebook Like Button -->
+<div id="fb-root"></div>
+<!-- External Variables for Portal Header -->
+<div id="desk-external-variables-header" class="desk-external-variables">
+  <div id="read_only">{{read_only}}</div>
+  <div id="site-default_mailbox">{{site.default_mailbox}}</div>
+  <div id="desk_javascript_host">{{desk_javascript_host}}</div>
+  <div id="twitter_enabled">{{desk.apps.twitter.enabled}}</div>
+  <div id="twitter_username">{{desk.apps.twitter.username}}</div>
+  <div id="system-snippets-loading">{{system.snippets.loading}}</div>
+  <div id="system-snippets-seconds_ago">{{system.snippets.seconds_ago}}</div>
+  <div id="system-snippets-a_minute_ago">{{system.snippets.a_minute_ago}}</div>
+  <div id="system-snippets-minutes_ago">{{system.snippets.minutes_ago}}</div>
+  <div id="system-snippets-an_hour_ago">{{system.snippets.an_hour_ago}}</div>
+  <div id="system-snippets-hours_ago">{{system.snippets.hours_ago}}</div>
+  <div id="system-snippets-a_day_ago">{{system.snippets.a_day_ago}}</div>
+  <div id="system-snippets-days_ago">{{system.snippets.days_ago}}</div>
+  <div id="system-snippets-about">{{system.snippets.about}}</div>
+  <div id="enable_gs">{{desk.apps.get_satisfaction.enabled}}</div>
+  <div id="system-snippets-invalid_characters_found">{{system.snippets.invalid_characters_found}}</div>
+  <div id="site-search_autocomplete_articles_url">{{site.search_autocomplete_articles_url}}</div>
+  <div id="search-term">{{search_term}}</div>
+  {% if desk.apps.get_satisfaction.enabled %}
+  <div id="system-snippets-get_satisfaction_error">{{system.snippets.get_satisfaction_error}}</div>
+  <div id="system-snippets-view_all">{{system.snippets.view_all}}</div>
+  <div id="system-snippets-no_related_discussions">{{system.snippets.no_related_discussions}}</div>
+  <div id="system-snippets-related_discussions">{{system.snippets.related_discussions}}</div>
+  <div id="zero0">{{0}}</div>
+  <div id="system-snippets-discussions">{{system.snippets.discussions}}</div>
+  <div id="system-snippets-replies">{{system.snippets.replies}}</div>
+  <div id="system-snippets-questions">{{system.snippets.questions}}</div>
+  <div id="system-snippets-ideas">{{system.snippets.ideas}}</div>
+  <div id="system-snippets-problems">{{system.snippets.problems}}</div>
+  <div id="system-snippets-praise">{{system.snippets.praise}}</div>
+  {% endif %}
+</div>
+<script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.shared.js"></script>
+<script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.header.js"></script>
+<script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.layout_footer.js"></script>

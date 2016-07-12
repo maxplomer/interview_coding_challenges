@@ -1,0 +1,43 @@
+/* Client Management */
+
+If its physically possible to get data out of the Customertron, I will get that data out of the Customertron.  If necessary travel to Tron headquarters.
+
+Or more realistically I would rather just the Client send me the data in whatever form they can, and most likely there is some common app to decode it like maybe "Sequel Pro" or a different database management tool.
+
+
+
+/* Random Question #1 - Favorite Food */
+
+Favorite food is whatever restaurant is close by and good.
+
+
+
+/* Random Question #2 - Improvements to this webpage */
+
+
+Still todo:
+
+- Better picture/icon hosting, currently just using imgur for demo purposes
+
+- Research better way to get topic instead using an if statement inside a for loop
+
+- Thinner text for WOW in main logo
+
+- Ask button needs to go to search page or open input for search
+
+- Make main section more response to width change between 1200px and 768px, instead of fixing to 1200px above 768px
+  
+- Add dropdown for header nav buttons and :hover color change
+
+- For Email Us page, testing more of effect to disable email input on system
+
+
+
+Overall Design:
+
+- For a university admissions/ask section, possibly not worry about mobile responsiveness and just have a fixed width of 1000px.
+
+- Another option might be to integrate some sharp/flat design principals to build more of a university look/brand.
+
+- Also a full size background picture taken at the university with a neat way to view it in a modal, possibly using FancyBox (fancybox.net) if needed.
+

@@ -1,0 +1,153 @@
+<div id="desk-external-variables-page_index" class="desk-external-variables">
+  <div id="system-snippets-just_moderated">{{just_moderated}}</div>
+</div>
+<div class="desktop-search-banner">
+  <div style="margin-bottom:9px;">
+    <a href='http://news.google.com'>WOW UNIVERSITY</a> > <a href='{{desk.system.links.home}}'>{{system.snippets.home}}</a> >
+  </div>
+  <img src='https://i.imgur.com/P50mMoF.png'>
+  <div style="height:0px;">
+    <input class="search-common-questions" id='q' type="text" placeholder="Search common questions">
+  </div>
+</div>
+<div id='support-main'>
+  {% if just_moderated %}
+  <div id="modal-screen">&nbsp;</div>
+  <div id="modal">
+    <div class="inner">
+      <div class="main">
+        <h1>{{system.snippets.your_post_submitted}}</h1>
+        <p class='subheader'>
+          {{system.snippets.not_shown_until_reviewed}}
+        </p>
+        <div id='form'>
+          <div class='input-button'>
+            <input id='moderation_okay_button'  name='commit' type='submit'  value='{{system.snippets.okay}}' />
+            <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display: none; margin: 7px 0 0 5px; position: absolute;'/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div class='support-body'>
+    <div id="help-topics">Help Topics</div>
+    <div class='content dashboard help-topics-holder group'>
+      {% for topic in topics %}
+      {% if topic.name == "Help Topics" %}
+      <div class="help-topic-col-div">
+        {% for article in topic.articles limit:3 %}
+        <div class="help-topic-row-div">
+          <img src='{{ article.kb_article_attachments.first.faq_download_url }}'>
+          <div class="help-topic-text">
+            <a href='{{ article.public_url }}'>{{ article.subject_plain | clip:40 }}</a>
+          </div>
+          <img class="mobile-arrow" src='https://i.imgur.com/BP6m7RF.png'>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="help-topic-col-div">
+        {% for article in topic.articles offset:3 limit:3 %}
+        <div class="help-topic-row-div">
+          <img src='{{ article.kb_article_attachments.first.faq_download_url }}'>
+          <div class="help-topic-text">
+            <a href='{{ article.public_url }}'>{{ article.subject_plain | clip:40 }}</a>
+          </div>
+          <img class="mobile-arrow" src='https://i.imgur.com/BP6m7RF.png'>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="help-topic-col-div">
+        {% for article in topic.articles offset:6 limit:3 %}
+        <div class="help-topic-row-div">
+          <img src='{{ article.kb_article_attachments.first.faq_download_url }}'>
+          <div class="help-topic-text">
+            <a href='{{ article.public_url }}'>{{ article.subject_plain | clip:40 }}</a>
+          </div>
+          <img class="mobile-arrow" src='https://i.imgur.com/BP6m7RF.png'>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div id="popular-articles">
+      <img class="desktop-ruby" src='https://i.imgur.com/4m2C6Lp.png'>
+      <img class="mobile-ruby" src='https://i.imgur.com/eD9FiZ4.png'>
+      <div class="popular-articles-text">
+        {{system.snippets.browse_by_topic}}
+      </div>
+    </div>
+    <div class='content dashboard'>
+      {% for topic in topics %}
+      {% if topic.name != "Help Topics" %}
+      <div class="popular-articles-div">
+        <div style="font-size:13px;color:rgb(11,89,151);margin-bottom:8px;">
+          {{ topic.name }}
+        </div>
+        {% for article in topic.articles limit:1 %}
+        <div style="font-size:22px;margin-bottom:4px;">
+          <a href='{{ article.public_url }}' style="color: black !important;">{{ article.subject_plain | clip:40 }}</a>
+        </div>
+        {{ article.body_plain | clip:140 }}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <!-- GS -->
+  {% if desk.apps.get_satisfaction.enabled %}
+  <div id='support-main' style='margin-top:20px;'>
+    <div class='support-body'>
+      <div class='content dashboard'>
+        <h3>{{system.snippets.community_discussions}}</h3>
+        <table id="gs-table" width='100%' cellspacing='0'>
+          <tr class="row1">
+            <td class="col1" width="50%">
+              <div id="gs_questions">
+                <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display:block;margin:auto;' />
+              </div>
+            </td>
+            <td class="col2">
+              <div id="gs_ideas">
+                <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display:block;margin:auto;' />
+              </div>
+            </td>
+          </tr>
+          <tr class="row2 last">
+            <td class="col1">
+              <div id="gs_problems">
+                <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display:block;margin:auto;' />
+              </div>
+            </td>
+            <td class="col2">
+              <div id="gs_praises">
+                <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display:block;margin:auto;' />
+              </div>
+            </td>
+          </tr>
+          {{gs_scripting}}
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- GS -->
+  <!--
+    ***************
+    The following attribution needs to remain as is in terms of wording with the appropriate link back to desk.com as per our terms of service: http://www.desk.com/terms
+    If you would like, you may change the location or the styling to better match your site, but the content and the link must remain in the template and visible to end users.
+    ****************
+    -->
+  <div id='footer'>
+    {{ desk.page.theme.footer_content }}
+    <div class="powered_by_desk">
+      <a href='http://www.desk.com'>
+        <div class="powered_by_logo"></div>
+      </a>
+      Powered by &nbsp;Desk.com
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.page_index.js"></script>

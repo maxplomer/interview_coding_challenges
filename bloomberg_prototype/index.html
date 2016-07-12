@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bloomberg HTML5 UI/UX Developer Exercise</title>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+  </head>
+  <body>
+    <div id="sidebar" onmouseleave="hideSidebar()">
+      View:<br>
+      <button onClick="handleSidebarButtonClick(null, this)" class="active">List</button><br>
+      <button onClick="handleSidebarButtonClick('grid', this)">Grid</button><br>
+      <button onClick="handleSidebarButtonClick('metro', this)">Metro</button><br>
+      <div class="badge-holder"><div class="badge badge-l">L</div></div>
+      <div class="badge-holder"><div class="badge badge-g">G</div></div>
+      <div class="badge-holder"><div class="badge badge-m">M</div></div>
+    </div>
+    <div id="virtual-list"></div>
+    <div id="list" style="display:none"></div>
+  </body>
+</html>
