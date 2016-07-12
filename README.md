@@ -17,6 +17,6 @@ This is a collection of coding challenges to practice for coding interviews.
 
 [Bloomberg Prototype](bloomberg_prototype)
 
-[Salesforce.com](saleforce_dot_com)
+[Salesforce.com](salesforce_dot_com)
 
 [Bridgewater](bridgewater)
