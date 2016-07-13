@@ -1,0 +1,113 @@
+How would you describe what role you are looking for? What would be the job titles of your desired role, if any?
+
+    Software Engineer / Web Developer, but I'm also interested in the other topics you listed such as QA analyst, Data Scientist, Machine Learning Modeler, etc.  I actually have a recent app that uses uclassify.com, which is a free machine learning web service.
+
+What are your strongest 2 programming language? 
+
+    Ruby, JavaScript
+
+Whats your main reason for changing jobs? 
+
+    I just worked a short-term project through Robert Half consulting, for a pharmaceutical software company Truveris, helping to fix bugs in their React.js app and also prototyping a new feature.
+
+Will you require a VISA to work in the US at any point (now, or in the future)? 
+
+    No
+
+If you've thought more about the next role, please list 2-3 things you definitely WANT it to include, and 2-3 RED FLAGS that would make you 
+not consider the role? 
+    Next Role want to include:
+    - Learning environment where given opportunity to really dive into a topic.  Also good to share what working on in an extended stand up once a week.
+    - Fun working environment and also sharing a fun activity with fellow co-workers.
+
+How many years of experience do you have working in industry, outside of academia/side projects? 
+
+    - Been working on software full-time either in projects or work, for 2 years.
+    - Before that did a lot of programming as part of mechanical engineering projects for many years.   You can check out solar thermal and dynamics codes on my github page https://github.com/maxplomer/engineering_projects
+    - Made a text-based game in BASIC when 5 years old
+
+RLS is a small company, and we plan to stay that way. Are you open to contributing to tangential technologies in addition to your primary role, for instance, to release a feature, you may need to have an understanding or make changes to databases, networks, webapps, infrastructure, machine learning models, etc. 
+
+    - Yes I currently have a broad knowledge base but have focused in on certain topics a long the way.  And have solved a lot of difficult problem in web development, whether its fixing that internet explorer bug, or fixing a capistrano Rails deployment after it has crashed.  I would love to chat about my machine learning model that classifies recipe ingredients into different categories.
+
+
+What are your salary requirements (cash, equity)? Are you interested more in salary or growth? 
+
+    90-100k range
+
+
+Are you specifically looking to work in a smaller company / startup, or just looking for a good team / right fit? 
+
+    - A lot of my projects have been on smaller teams, but my most recent consulting job was a medium sized team with many different contributors. 
+    - I do enjoy the excitement and energy of a smaller company / startup 
+
+
+Short Technical Exercise 
+
+Write a simple function that takes in an input file of sentences (single column, one per line) and produces a new file with the ordered frequency counts of these sentences, in any programming language. For instance, a couple example sentences are: "I like dogs" and "I like cats". 
+
+Analyze your program and tell us a detailed running time of it, based on parameters you define (i.e. number of lines in the input file) 
+
+
+
+    def create_ordered_freq_counts(input_filename)
+      # This method will take in an input file of sentences
+      # And output (to output.txt) is only unique sentences and their frequency, ordered by their frequency
+      # Frequency is first in the output line, then there is a space and then the unique sentence
+
+      sentences_array = IO.readlines input_filename
+      frequency_hash = Hash.new(0)
+
+      sentences_array.each do |sentence|
+        k = sentence.strip
+        frequency_hash[k] += 1
+      end
+
+      File.open("output.txt", "w") do |f|
+        frequency_hash.sort_by {|k, v| -v}.each do |sentence, freq|
+          row = "#{freq} #{sentence}"
+          f.puts row
+        end
+      end
+
+      nil
+    end
+
+
+
+    # Calling the method
+
+    require 'benchmark'
+
+    puts Benchmark.measure{ create_ordered_freq_counts("input_10lines.txt") }
+    puts Benchmark.measure{ create_ordered_freq_counts("input_100lines.txt") }
+    puts Benchmark.measure{ create_ordered_freq_counts("input_1000lines.txt") }
+    puts Benchmark.measure{ create_ordered_freq_counts("input_10000lines.txt") }
+    puts Benchmark.measure{ create_ordered_freq_counts("input_100000lines.txt") }
+
+
+
+Analysis of function running time on my local machine with 3 unique sentences:
+
+    number of lines | average running time (seconds)
+    ------------------------------------------------
+        10          |         0.000289   
+                    |               
+        100         |         0.000394
+                    |                
+        1000        |         0.004785
+                    |                  
+        10000       |         0.009332                  
+                    |
+        100000      |         0.045291                  
+                    |                      
+
+
+
+What types of things you do value when writing and reading code?
+
+    I value code that is clean and human readable. For example depending on the language sometimes it can be helpful to name a variable customer_hash or customers_array, and actually define in the name of the variable what kind it is.  If the code is so abstract that its very hard to understand what it is doing, definitely comments will help.  I like to see unit testing for backend methods and asynchronous testing for frontend features.  I am always looking back at past code and also analyzing others, that I try to bring together all my best knowledge in every project I work on and constantly keep evolving.
+
+
+
+
