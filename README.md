@@ -22,3 +22,5 @@ This is a collection of coding challenges to practice for coding interviews.
 [Bridgewater](bridgewater)
 
 [Real Life Sciences](real_life_sciences)
+
+[Triplebyte](triplebyte)
